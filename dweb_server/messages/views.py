@@ -1,5 +1,8 @@
 from django.http import HttpResponse
+from django.template import loader
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the messages index.")
+    template = loader.get_template('/messages/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
