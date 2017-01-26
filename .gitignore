@@ -1,0 +1,2 @@
+*.pyc
+dweb_server/**/*.pyc
